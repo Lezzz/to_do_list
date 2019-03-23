@@ -2,6 +2,22 @@ html {
   height: 100%;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(
+    to bottom,
+    #284a7e,
+    #26659c,
+    #2081b8,
+    #169ed3,
+    #12bceb
+  );
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 h1 {
   background: #284a7e;
   color: white;
@@ -21,7 +37,7 @@ ul {
 body {
   font-family: "Montserrat", sans-serif;
   background-image: linear-gradient(
-    to right top,
+    to bottom,
     #284a7e,
     #26659c,
     #2081b8,
@@ -34,13 +50,27 @@ body {
   background-attachment: fixed;
 }
 
+span {
+  background: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0px;
+  display: inline-block;
+  transition: 0.1s linear;
+  opacity: 0;
+}
+
 li {
   background: white;
   line-height: 40px;
   color: #666;
 }
-li:nth-child(2n) {
-  background: #f7f7f7;
+
+li:hover span {
+  width: 40px;
+  opacity: 1;
 }
 
 input {
@@ -50,6 +80,11 @@ input {
   width: 100%;
   padding: 13px 13px 13px 20px;
   box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+li:nth-child(2n) {
+  background: #f7f7f7;
 }
 
 input:focus {
@@ -58,11 +93,15 @@ input:focus {
   outline: none;
 }
 
+.fa-eye-slash {
+  float: right;
+}
+
 #container {
   width: 360px;
   margin: 100px auto;
   background: #f7f7f7;
-  box-shadow: 0 0 3px rgb(0, 0, 0, 0.25);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
 }
 
 .completed {
